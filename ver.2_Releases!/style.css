@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4e9dc; /* Нежно-кофейный */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.color-picker {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+.color-btn[data-color="#f4e9dc"] {
+    background-color: #f4e9dc; /* Нежно-кофейный */
+}
+
+.color-btn[data-color="#fadadd"] {
+    background-color: #fadadd; /* Нежно-розовый */
+}
+
+.color-btn[data-color="#add8e6"] {
+    background-color: #add8e6; /* Нежно-голубой */
+}
+
+/* Остальные стили игры */
+.game-container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.tile.correct {
+    background-color: #6aaa64;
+    color: white;
+    border-color: #6aaa64;
+}
+
+.tile.present {
+    background-color: #c9b458;
+    color: white;
+    border-color: #c9b458;
+}
+
+.tile.absent {
+    background-color: #787c7e;
+    color: white;
+    border-color: #787c7e;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 5px;
+}
+
+.key {
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d3d6da;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.enter-key {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+}
+
+.backspace-key {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
